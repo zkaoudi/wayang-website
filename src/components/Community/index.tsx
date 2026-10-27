@@ -65,6 +65,7 @@ const paths: Record<string, ReactNode> = {
       <path d="m13.5 6.5 4 4" />
     </>
   ),
+  hash: <path d="M9 3 7 21M17 3l-2 18M4 8.5h17M3 15.5h17" />,
   code: <path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />,
   book: (
     <>
