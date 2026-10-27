@@ -173,7 +173,7 @@ Before creating a pull request in Apache Wayang, check that the build and tests 
 8. Comment on the related issue, if any, to let others know you are working on it. There is no need to be assigned to the issue to work on it.
 
 ### The review process
-- Other reviewers, including committers, may comment on the changes and suggest modifications. Changes can be added by simply pushing more commits to the same branch.
+- A pull request needs at least one approving review from a committer before it can be merged; for larger changes, such as new features, API changes, or changes to the core or optimizer, two committer reviews are recommended. Other reviewers, including non-committers, may also comment on the changes and suggest modifications. Changes can be added by simply pushing more commits to the same branch.
 - Lively, polite, rapid technical debate is encouraged from everyone in the community. The outcome may be a rejection of the entire change.
 - Keep in mind that changes to more critical parts of Wayang, like its core and optimizer, will be subjected to more review, and may require more testing and proof of correctness than other changes.
 - Reviewers can indicate that a change looks suitable for merging by approving the pull request on GitHub or with a comment such as “LGTM”. This means: “I’ve looked at this thoroughly and take as much ownership as if I wrote the patch myself”. If you approve a change, you will be expected to help with bugs or follow-up issues on it. Consistent, judicious approvals are a great way to gain credibility as a reviewer with the broader community.
