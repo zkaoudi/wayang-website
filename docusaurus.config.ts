@@ -85,25 +85,10 @@ title: 'Apache Wayang™',
           label: 'Developers',
         },
         {
-          type: 'dropdown',
-          label: 'Community',
+          type: 'docSidebar',
+          sidebarId: 'communitySidebar',
           position: 'right',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog/',
-            },
-            {
-              type: 'doc',
-              docId: 'community/resources',
-              label: 'Community Resources',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'communitySidebar',
-              label: 'Project',
-            },
-          ]
+          label: 'Community',
         },
         {
           type: 'dropdown',
