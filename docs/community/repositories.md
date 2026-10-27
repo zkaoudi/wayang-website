@@ -21,4 +21,4 @@ GitHub mirror : [https://github.com/apache/incubator-wayang-website.git](https:/
 
 ### Issues, Bugs and Features
 
-If you have a specific bug to report or feature request, we suggest opening an issue in [Jira](https://issues.apache.org/jira/projects/WAYANG/issue).
+If you have a specific bug to report or feature request, please open an issue on [GitHub](https://github.com/apache/wayang/issues). Before creating a new one, search the existing issues to check whether it has already been reported.
