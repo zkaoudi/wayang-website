@@ -37,11 +37,6 @@ You don’t need to write code to make a real difference. Helping more people di
 - **Teach with Wayang**: use it in a course, supervise a student project or thesis, or mentor in programmes like Google Summer of Code.
 - **Tell us about your use case**: knowing who uses Wayang and how helps the project set priorities and shows others what is possible. Share it on dev@.
 
-## Contributing user libraries to Wayang
-Just as Java and Scala applications can access a huge selection of libraries and utilities, none of which are part of Java or Scala themselves, Wayang aims to support a rich ecosystem of libraries. Many useful utilities or features belong outside of Wayang rather than in its core. For example, optimizer improvements and new platform integrations usually belong in Wayang itself, while an application or library built on top of Wayang can live happily in its own repository.
-
-To that end, large and independent new functionality may not be accepted into Wayang itself, but can be hosted as a separate project. If unsure, discuss it on the dev@ mailing list first.
-
 ## Contributing bug reports
 Ideally, bug reports are accompanied by a proposed code change to fix the bug. This isn’t always possible, as those who discover a bug may not have the experience to fix it. A bug may be reported by opening a [GitHub issue](https://github.com/apache/wayang/issues/new) without creating a pull request (see below).
 
