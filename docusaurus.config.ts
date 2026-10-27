@@ -90,6 +90,11 @@ title: 'Apache Wayang™',
           position: 'right',
           items: [
             {
+              type: 'doc',
+              docId: 'community/join',
+              label: 'Join the Community',
+            },
+            {
               label: 'Blog',
               to: '/blog/',
             },
@@ -158,6 +163,10 @@ title: 'Apache Wayang™',
         {
           title: 'Community',
           items: [
+            {
+              label: 'Join the community',
+              to: '/docs/community/join',
+            },
             {
               label: 'Mailing list',
               href: 'https://lists.apache.org/list.html?dev@wayang.apache.org',
