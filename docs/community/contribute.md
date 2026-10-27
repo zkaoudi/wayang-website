@@ -6,9 +6,9 @@ id: contribute
 
 This guide documents the best way to make various types of contribution to Apache Wayang, including what is required before submitting a code change.
 
-Contributing to Wayang doesn’t just mean writing code. Helping new users on the mailing list, testing releases, improving documentation, giving talks, and spreading the word on social media are also very welcome. In fact, proposing significant code changes usually requires first gaining experience and credibility within the community by helping in other ways. This is also a guide to becoming an effective contributor.
+Contributing to Wayang doesn’t just mean writing code. Helping new users on the mailing list, testing releases, improving documentation, giving talks, and spreading the word on social media are all valuable contributions. For larger code changes, it helps to first get to know the community and the codebase, for example through some of the contributions below, so that your proposal fits where the project is heading.
 
-So, this guide organizes contributions in the order that they should probably be considered by new contributors who intend to get involved long-term. Build some track record of helping others, rather than just opening pull requests.
+The guide starts with ways to contribute that don’t require code and ends with the process for code changes.
 
 ## Contributing by helping other users
 A great way to contribute to Wayang is to help answer user questions on the dev@ mailing list or in [GitHub issues](https://github.com/apache/wayang/issues). There are always new Wayang users; taking a few minutes to help answer a question is a very valuable community service.
@@ -28,17 +28,26 @@ The documentation on this website, including the [Developer](/docs/guide/getting
 
 Javadoc and other documentation generated from the source code are changed in the [main Wayang repository](https://github.com/apache/wayang), following the same process as code changes below.
 
-## Contributing user libraries to Wayang
-Just as Java and Scala applications can access a huge selection of libraries and utilities, none of which are part of Java or Scala themselves, Wayang aims to support a rich ecosystem of libraries. Many new useful utilities or features belong outside of Wayang rather than in the core. For example, query optimizer code and platform support probably have to be part of core Wayang, but useful machine learning algorithms can happily exist outside of it.
+## Contributing by spreading the word
+You don’t need to write code to make a real difference. Helping more people discover and understand Wayang is one of the most valuable contributions, and the PMC takes it into account when considering new committers. For example:
 
-To that end, large and independent new functionality may not be accepted into Wayang itself, but can and should be hosted as a separate project and repository. If unsure, discuss it on the dev@ mailing list first.
+- **Give a talk** about Wayang at a meetup, conference, lecture, or company tech talk. Let us know on dev@ so we can help spread the word.
+- **Write a blog post or tutorial** about how you use Wayang, a benchmark you ran, or a lesson learned. We are happy to publish posts on the [Wayang blog](/blog): open a pull request in the [wayang-website](https://github.com/apache/wayang-website) repository with your post under `blog/`, or link to it from your own site.
+- **Share on social media**: post about releases, blog posts, and your own Wayang experiments, and follow the project on [LinkedIn](https://www.linkedin.com/company/apachewayang), [X](https://twitter.com/apachewayang), and [YouTube](https://www.youtube.com/@apachewayang).
+- **Teach with Wayang**: use it in a course, supervise a student project or thesis, or mentor in programmes like Google Summer of Code.
+- **Tell us about your use case**: knowing who uses Wayang and how helps the project set priorities and shows others what is possible. Share it on dev@.
+
+## Contributing user libraries to Wayang
+Just as Java and Scala applications can access a huge selection of libraries and utilities, none of which are part of Java or Scala themselves, Wayang aims to support a rich ecosystem of libraries. Many useful utilities or features belong outside of Wayang rather than in its core. For example, optimizer improvements and new platform integrations usually belong in Wayang itself, while an application or library built on top of Wayang can live happily in its own repository.
+
+To that end, large and independent new functionality may not be accepted into Wayang itself, but can be hosted as a separate project. If unsure, discuss it on the dev@ mailing list first.
 
 ## Contributing bug reports
 Ideally, bug reports are accompanied by a proposed code change to fix the bug. This isn’t always possible, as those who discover a bug may not have the experience to fix it. A bug may be reported by opening a [GitHub issue](https://github.com/apache/wayang/issues/new) without creating a pull request (see below).
 
 Bug reports are only useful, however, if they include enough information to understand, isolate and ideally reproduce the bug. Simply encountering an error does not mean a bug should be reported; as below, search the existing GitHub issues and the dev@ mailing list archives first. Unreproducible bugs, or simple error reports, may be closed.
 
-It’s very helpful if the bug report has a description of how the bug was introduced, by which commit, so that reviewers can easily understand the bug. The pull request to fix the bug should narrow down the problem to the root cause.
+If you know how the bug was introduced, for example by which commit, mention it so that reviewers can easily understand it. The pull request to fix the bug should narrow down the problem to the root cause.
 
 Performance regression is also one kind of bug. The pull request to fix a performance regression must provide a benchmark to prove the problem is indeed fixed.
 
@@ -60,8 +69,8 @@ Before proceeding, contributors should evaluate if the proposed change is likely
 4. Is the scope of the change matched to the contributor’s level of experience? Anyone is qualified to suggest a typo fix, but refactoring the optimizer requires much more understanding of Wayang. Some changes require building up experience first (see above).
 5. It’s worth reemphasizing that changes to the core of Wayang, or to highly complex and important modules like the optimizer and the platform integrations, are more difficult to make correctly. They will be subjected to more scrutiny, and held to a higher standard of review than changes to less critical code.
 
-## ML4ALL and optimizer-specific contribution guidelines
-While a rich set of algorithms is an important goal for Wayang, scaling the project requires that maintainability, consistency, and code quality come first. New algorithms should:
+## Contributing new algorithms
+This applies, for example, to machine learning algorithms in ML4ALL. While a rich set of algorithms is an important goal for Wayang, scaling the project requires that maintainability, consistency, and code quality come first. New algorithms should:
 
 1. Be used and accepted (academic citations and concrete use cases can help justify this)
 2. Be well documented
@@ -71,7 +80,7 @@ While a rich set of algorithms is an important goal for Wayang, scaling the proj
 ## Error message guidelines
 Exceptions thrown in Wayang should be associated with standardized and actionable error messages.
 
-#### Error messages should answer the following questions:
+### Error messages should answer the following questions
 
 - What was the problem?
 - Why did the problem happen?
@@ -90,7 +99,7 @@ __When writing error messages, you should__:
 ## Code review criteria
 Before considering how to contribute code, it’s useful to understand how code is reviewed, and why changes may be rejected. See the [guide for code reviewers](https://google.github.io/eng-practices/review/) from Google’s Engineering Practices documentation. Simply put, changes that have many or large positives, and few negative effects or risks, are much more likely to be merged, and merged quickly. Risky and less valuable changes are very unlikely to be merged, and may be rejected outright rather than receive iterations of review.
 
-#### Positives
+### Positives
 - Fixes the root cause of a bug in existing functionality
 - Adds functionality or fixes a problem needed by a large number of users
 - Simple, targeted
@@ -99,7 +108,7 @@ Before considering how to contribute code, it’s useful to understand how code 
 - Reduces complexity and lines of code
 - Change has already been discussed and is known to committers
 
-#### Negatives, risks
+### Negatives and risks
 - Band-aids a symptom of a bug only
 - Introduces complex new functionality, especially an API that needs to be supported
 - Adds complexity that only helps a niche use case
@@ -146,20 +155,21 @@ Before creating a pull request in Apache Wayang, check that the build and tests 
     1. When you add tests, make sure they are self-descriptive.
     2. If your pull request fixes a specific issue, consider referencing the issue number in the test, for example:
 
-``` Java
-@Test
-public void testCase() {
-  // GH-1234: a short description of the test
-```
+    ```java
+    @Test
+    public void testEmptyInput() {
+      // Regression test for #1234: a short description of the problem
+      ...
+    }
+    ```
 
 4. Consider whether benchmark results should be added or updated as part of the change, and add them as needed.
-5. Run the build and all tests locally to verify that the code still compiles, passes tests, and passes style and license-header checks. If style checks fail, review the Code Style Guide below.
+5. Run the build and all tests locally (for example `./mvnw clean install`) to verify that the code still compiles, passes tests, and passes style and license-header checks. If style checks fail, review the Code Style Guide below.
 6. Push commits to your branch on your fork.
 7. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) against the `main` branch of [apache/wayang](https://github.com/apache/wayang). This triggers the CI workflows on the pull request.
     1. Give the pull request a short, descriptive title. If it resolves an issue, write `Fixes #1234` (or `Closes #1234`) in the description so the issue is linked and closed automatically when the pull request is merged.
     2. If the pull request is still a work in progress and not ready to be merged, but needs to be pushed to GitHub to facilitate review, open it as a [draft pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests).
     3. Consider identifying committers or other contributors who have worked on the code being changed. Find the file(s) in GitHub and click “Blame” to see a line-by-line annotation of who changed the code last. You can add @username in the PR description to ping them.
-    4. Please state that the contribution is your original work and that you license the work to the project under the project’s open source license.
 8. Comment on the related issue, if any, to let others know you are working on it. There is no need to be assigned to the issue to work on it.
 
 ### The review process
@@ -167,7 +177,7 @@ public void testCase() {
 - Lively, polite, rapid technical debate is encouraged from everyone in the community. The outcome may be a rejection of the entire change.
 - Keep in mind that changes to more critical parts of Wayang, like its core and optimizer, will be subjected to more review, and may require more testing and proof of correctness than other changes.
 - Reviewers can indicate that a change looks suitable for merging by approving the pull request on GitHub or with a comment such as “LGTM”. This means: “I’ve looked at this thoroughly and take as much ownership as if I wrote the patch myself”. If you approve a change, you will be expected to help with bugs or follow-up issues on it. Consistent, judicious approvals are a great way to gain credibility as a reviewer with the broader community.
-- Sometimes, other changes will be merged which conflict with your pull request’s changes. The PR can’t be merged until the conflict is resolved. You can resolve it by adding a remote to keep up with upstream changes (`git remote add upstream https://github.com/apache/wayang.git`), running `git fetch upstream` followed by `git rebase upstream/main`, resolving the conflicts by hand, and then pushing the result to your branch.
+- Sometimes, other changes will be merged which conflict with your pull request’s changes. The PR can’t be merged until the conflict is resolved. You can resolve it by adding a remote to keep up with upstream changes (`git remote add upstream https://github.com/apache/wayang.git`), running `git fetch upstream` followed by `git rebase upstream/main`, resolving the conflicts by hand, and then pushing the result to your branch with `git push --force-with-lease`.
 - Try to be responsive to the discussion rather than let days pass between replies.
 
 ### Closing your pull request / issue
@@ -181,8 +191,8 @@ public void testCase() {
 ## Code style guide
 Please follow the style of the existing codebase.
 
-- For Python code, Apache Wayang follows [PEP 8](https://peps.python.org/pep-0008/) with one exception: lines can be up to 100 characters in length, not 79.
-- For Java code, Apache Wayang follows [Oracle’s Java code conventions](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html).
+- For Java code, Apache Wayang follows the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html); the build runs Checkstyle with the matching rules.
+- For Python code, Apache Wayang follows [PEP 8](https://peps.python.org/pep-0008/).
 - For Scala code, Apache Wayang follows the official [Scala style guide](https://docs.scala-lang.org/style/).
 - Every source file must start with the Apache License header; the build checks this automatically.
 
@@ -196,4 +206,4 @@ We expect this code of conduct to be honored by everyone who participates in the
 
 This code is not exhaustive or complete. It serves to distill our common understanding of a collaborative, shared environment and goals. We expect it to be followed in spirit as much as in the letter, so that it can enrich all of us and the technical communities in which we participate.
 
-This guide was originally released by [Apache Spark](https://spark.apache.org/contributing.html), the Apache Wayang project adapted the guide.
+This guide is adapted from the [Apache Spark contribution guide](https://spark.apache.org/contributing.html).
