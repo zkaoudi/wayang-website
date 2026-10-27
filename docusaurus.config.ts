@@ -90,11 +90,6 @@ title: 'Apache Wayang™',
           position: 'right',
           items: [
             {
-              type: 'doc',
-              docId: 'community/join',
-              label: 'Join the Community',
-            },
-            {
               label: 'Blog',
               to: '/blog/',
             },
