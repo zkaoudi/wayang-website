@@ -28,9 +28,12 @@ import {CardGrid, Steps, QuickActions, Callout} from '@site/src/components/Commu
 
 Apache Wayang is built in the open by researchers, engineers, and students from universities and companies around the world. Whether you want to ask a question, report a bug, share how you use Wayang, or write code, you are welcome here, and no contribution is too small.
 
+**You don't need to write code to contribute.** Improving documentation, spreading the word on social media, giving talks, answering questions, and testing releases are all real contributions to Wayang, and they count just as much in the Apache way.
+
 <QuickActions
   actions={[
     {label: 'Join the dev@ mailing list', to: 'mailto:dev-subscribe@wayang.apache.org', primary: true},
+    {label: 'Ways to contribute', to: '#every-contribution-counts-not-just-code'},
     {label: 'Browse open issues', to: 'https://github.com/apache/wayang/issues'},
     {label: 'Contribution guide', to: '/docs/community/contribute'},
   ]}
@@ -107,9 +110,86 @@ The **dev@ mailing list** is where the project lives: design discussions, releas
   ]}
 />
 
-## Your path to a first contribution
+## Every contribution counts, not just code
 
-Most contributors follow roughly these steps. You don't need permission to start, but saying hello first helps us point you in the right direction.
+Open source projects need much more than code to thrive. Pick whatever matches your skills and interests; most of these don't involve the codebase at all.
+
+<CardGrid
+  cards={[
+    {
+      icon: 'book',
+      title: 'Documentation',
+      description:
+        'Fix a typo, clarify a confusing guide, write a tutorial, or add an example. Good docs are often the most impactful contribution, and this website is open source too.',
+      links: [{label: 'Website repo', to: 'https://github.com/apache/wayang-website'}],
+    },
+    {
+      icon: 'megaphone',
+      title: 'Social media',
+      description:
+        'Share releases, blog posts, and your own Wayang experiments on LinkedIn, X, Reddit, or wherever your audience is. Helping others discover Wayang grows the community.',
+      links: [
+        {label: 'LinkedIn', to: 'https://www.linkedin.com/company/apachewayang'},
+        {label: 'X', to: 'https://twitter.com/apachewayang'},
+      ],
+    },
+    {
+      icon: 'people',
+      title: 'Talks and events',
+      description:
+        'Present Wayang at a meetup, conference, lecture, or company tech talk. Let us know on dev@ so we can help spread the word.',
+      links: [{label: 'Talks on YouTube', to: 'https://www.youtube.com/@apachewayang'}],
+    },
+    {
+      icon: 'pen',
+      title: 'Blog posts and articles',
+      description:
+        'Write about how you use Wayang, a benchmark you ran, or a lesson learned. We are happy to publish posts on the Wayang blog or link to yours.',
+      links: [
+        {label: 'Our blog', to: '/blog'},
+        {label: 'Community resources', to: '/docs/community/resources'},
+      ],
+    },
+    {
+      icon: 'help',
+      title: 'Help other users',
+      description:
+        'Answer questions on the mailing list or in issues. Sharing what you know is one of the most valued contributions.',
+      links: [{label: 'Mailing list guide', to: '/docs/community/mailinglist'}],
+    },
+    {
+      icon: 'check',
+      title: 'Test and report',
+      description:
+        'Try release candidates on your workloads, vote on dev@, and file clear bug reports or feature requests.',
+      links: [
+        {label: 'Downloads', to: '/docs/start/download'},
+        {label: 'New issue', to: 'https://github.com/apache/wayang/issues/new'},
+      ],
+    },
+    {
+      icon: 'school',
+      title: 'Students',
+      description:
+        'Wayang takes part in programmes like Google Summer of Code and welcomes thesis projects. Read about past projects on the blog.',
+      links: [{label: 'Student projects', to: '/blog/tags/gsoc'}],
+    },
+    {
+      icon: 'code',
+      title: 'Code',
+      description:
+        'Fix bugs, add operators, or support new platforms. The steps below walk you through your first pull request.',
+      links: [
+        {label: 'Add an operator', to: '/docs/guide/adding-operators'},
+        {label: 'Optimizer', to: '/docs/guide/optimizer'},
+      ],
+    },
+  ]}
+/>
+
+## Your first pull request
+
+If you want to change code or documentation, most contributors follow roughly these steps. You don't need permission to start, but saying hello first helps us point you in the right direction.
 
 <Steps
   steps={[
@@ -164,60 +244,6 @@ Most contributors follow roughly these steps. You don't need permission to start
   ]}
 />
 
-## Ways to contribute
-
-Code is only one way to help. Every one of these makes Wayang better.
-
-<CardGrid
-  cards={[
-    {
-      icon: 'code',
-      title: 'Code',
-      description:
-        'Fix bugs, add operators, or support new platforms. See how to add an operator and how the optimizer works.',
-      links: [
-        {label: 'Add an operator', to: '/docs/guide/adding-operators'},
-        {label: 'Optimizer', to: '/docs/guide/optimizer'},
-      ],
-    },
-    {
-      icon: 'book',
-      title: 'Docs and website',
-      description:
-        'Improve guides, add examples, or fix anything unclear. This website is open source too.',
-      links: [{label: 'Website repo', to: 'https://github.com/apache/wayang-website'}],
-    },
-    {
-      icon: 'check',
-      title: 'Test releases',
-      description:
-        'Try release candidates on your workloads and report back when votes happen on dev@.',
-      links: [{label: 'Downloads', to: '/docs/start/download'}],
-    },
-    {
-      icon: 'help',
-      title: 'Help other users',
-      description:
-        'Answer questions on the mailing list or in issues. Sharing what you know is one of the most valued contributions.',
-      links: [{label: 'Mailing list guide', to: '/docs/community/mailinglist'}],
-    },
-    {
-      icon: 'megaphone',
-      title: 'Share your work',
-      description:
-        'Write a blog post, give a talk, or tell us how you use Wayang. We are happy to feature community content.',
-      links: [{label: 'Community resources', to: '/docs/community/resources'}],
-    },
-    {
-      icon: 'school',
-      title: 'Students',
-      description:
-        'Wayang takes part in programmes like Google Summer of Code and welcomes thesis projects. Read about past projects on the blog.',
-      links: [{label: 'Student projects', to: '/blog/tags/gsoc'}],
-    },
-  ]}
-/>
-
 ## Grow with the project
 
 Apache projects run on merit: people who contribute steadily earn more responsibility.
@@ -228,7 +254,7 @@ Apache projects run on merit: people who contribute steadily earn more responsib
       icon: 'key',
       title: 'Become a committer',
       description:
-        'Committers have write access to the repositories. The PMC invites contributors with sustained, high-quality contributions and a constructive presence in the community.',
+        'Committers have write access to the repositories. The PMC invites people with sustained contributions of any kind, including documentation, community building, and advocacy, not only code.',
       links: [{label: 'What we look for', to: '/docs/community/committer'}],
     },
     {
